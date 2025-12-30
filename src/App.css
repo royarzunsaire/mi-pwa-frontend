@@ -420,3 +420,33 @@ button:disabled {
     padding: 20px 16px;
   }
 }
+
+/* Indicador de auto-sync */
+.auto-sync-indicator {
+  color: #10b981;
+  font-size: 13px;
+  font-weight: 600;
+  margin-left: 8px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Info de sincronización */
+.sync-info {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.sync-section button {
+  margin-bottom: 8px;
+}

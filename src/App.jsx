@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { storage } from './services/storage';
 import { syncService } from './services/sync';
 import './App.css';
@@ -12,17 +12,59 @@ function App() {
   const [syncing, setSyncing] = useState(false);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
-  const [activeTab, setActiveTab] = useState('local'); // 'local' o 'server'
+  const [activeTab, setActiveTab] = useState('local');
+  
+  // Usar ref para evitar sincronizaciones múltiples simultáneas
+  const syncInProgress = useRef(false);
+  const autoSyncEnabled = useRef(true);
 
-  // Monitorear conexión
+  // Función para sincronizar automáticamente
+  const autoSync = async () => {
+    // Evitar sincronización si ya hay una en progreso
+    if (syncInProgress.current || !autoSyncEnabled.current) return;
+    
+    // Verificar si hay datos pendientes
+    const pending = await storage.getPendingData();
+    const unsynced = pending.filter(item => !item.synced);
+    
+    if (unsynced.length === 0) return;
+    
+    syncInProgress.current = true;
+    
+    try {
+      console.log('🔄 Sincronización automática iniciada...');
+      const result = await syncService.syncPendingData();
+      
+      if (result.synced > 0) {
+        await storage.clearSynced();
+        loadLocalData();
+        loadServerData();
+        setMessage(`✓ Auto-sync: ${result.synced} datos sincronizados`);
+        setTimeout(() => setMessage(''), 4000);
+      }
+    } catch (error) {
+      console.error('Error en auto-sync:', error);
+    } finally {
+      syncInProgress.current = false;
+    }
+  };
+
+  // Monitorear cambios de conexión
   useEffect(() => {
-    const handleOnline = () => {
+    const handleOnline = async () => {
+      console.log('🟢 Conexión restaurada');
       setIsOnline(true);
-      setMessage('🟢 Conexión restaurada');
-      setTimeout(() => setMessage(''), 3000);
+      setMessage('🟢 Conexión restaurada - sincronizando...');
+      
+      // Esperar un momento para que la conexión se estabilice
+      setTimeout(async () => {
+        await autoSync();
+        await loadServerData();
+      }, 1000);
     };
     
     const handleOffline = () => {
+      console.log('🔴 Conexión perdida');
       setIsOnline(false);
       setMessage('🔴 Sin conexión - trabajando offline');
       setTimeout(() => setMessage(''), 3000);
@@ -37,9 +79,23 @@ function App() {
     };
   }, []);
 
-  // Cargar datos al iniciar
+  // Cargar datos al iniciar y sincronizar si hay pendientes
   useEffect(() => {
-    loadLocalData();
+    const initializeApp = async () => {
+      await loadLocalData();
+      
+      if (isOnline) {
+        await loadServerData();
+        // Sincronizar automáticamente al abrir si hay datos pendientes
+        setTimeout(autoSync, 500);
+      }
+    };
+    
+    initializeApp();
+  }, []);
+
+  // Actualizar cuando cambia el estado online
+  useEffect(() => {
     if (isOnline) {
       loadServerData();
     }
@@ -61,8 +117,6 @@ function App() {
       setServerData(data);
     } catch (error) {
       console.error('Error cargando datos del servidor:', error);
-      setMessage('⚠️ Error al cargar datos del servidor');
-      setTimeout(() => setMessage(''), 3000);
     } finally {
       setLoading(false);
     }
@@ -75,7 +129,14 @@ function App() {
       await storage.addPendingData(formData);
       setMessage('✓ Datos guardados localmente');
       setFormData({ nombre: '', descripcion: '' });
-      loadLocalData();
+      await loadLocalData();
+      
+      // Si está online, intentar sincronizar automáticamente
+      if (isOnline) {
+        setTimeout(() => {
+          autoSync();
+        }, 500);
+      }
       
       setTimeout(() => setMessage(''), 3000);
     } catch (error) {
@@ -94,7 +155,6 @@ function App() {
       if (result.synced > 0) {
         await storage.clearSynced();
         loadLocalData();
-        // Recargar datos del servidor para ver los nuevos
         await loadServerData();
       }
       
@@ -123,6 +183,11 @@ function App() {
           Estado: <span className={isOnline ? 'online' : 'offline'}>
             {isOnline ? '🟢 Conectado' : '🔴 Sin conexión'}
           </span>
+          {pendingCount > 0 && isOnline && (
+            <span className="auto-sync-indicator">
+              • Auto-sync activo
+            </span>
+          )}
         </div>
       </header>
 
@@ -154,8 +219,15 @@ function App() {
             onClick={handleSync} 
             disabled={!isOnline || syncing || pendingCount === 0}
           >
-            {syncing ? 'Sincronizando...' : 'Sincronizar con servidor'}
+            {syncing ? 'Sincronizando...' : 'Sincronizar ahora (Manual)'}
           </button>
+          <p className="sync-info">
+            {isOnline && pendingCount > 0 
+              ? '💡 La sincronización automática está activa'
+              : isOnline 
+                ? '✓ No hay datos pendientes'
+                : '⚠️ Sincronizará automáticamente al reconectar'}
+          </p>
         </div>
 
         {/* Tabs para alternar entre vistas */}
