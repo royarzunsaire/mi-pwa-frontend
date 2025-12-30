@@ -4,32 +4,28 @@
   box-sizing: border-box;
 }
 
-html, body {
+html {
   height: 100%;
 }
 
 body {
+  min-height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#root {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-/* Contenedor principal - siempre centrado */
+/* Contenedor principal - perfectamente centrado */
 .App {
-  width: 100%;
   max-width: 900px;
+  width: 100%;
   margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -38,25 +34,25 @@ body {
 /* Header */
 header {
   background: white;
-  padding: 24px 28px;
+  padding: 28px 32px;
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
 }
 
 header h1 {
   margin-bottom: 12px;
   color: #1f2937;
-  font-size: clamp(22px, 5vw, 32px);
+  font-size: 32px;
   font-weight: 700;
 }
 
 .status {
-  font-size: clamp(14px, 3vw, 16px);
+  font-size: 16px;
   color: #6b7280;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
@@ -73,26 +69,23 @@ header h1 {
 /* Indicador de auto-sync */
 .auto-sync-indicator {
   color: #10b981;
-  font-size: clamp(12px, 2.5vw, 14px);
+  font-size: 14px;
   font-weight: 600;
   animation: pulse 2s ease-in-out infinite;
 }
 
 @keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.6;
-  }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
 }
 
 /* Main content */
 main {
   background: white;
-  padding: clamp(24px, 4vw, 36px);
+  padding: 36px;
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
 }
 
 /* Formulario */
@@ -103,14 +96,15 @@ form {
   margin-bottom: 32px;
   padding-bottom: 32px;
   border-bottom: 2px solid #f3f4f6;
+  width: 100%;
 }
 
 input, textarea {
   width: 100%;
-  padding: 14px 16px;
+  padding: 14px 18px;
   border: 2px solid #e5e7eb;
   border-radius: 10px;
-  font-size: clamp(15px, 3vw, 16px);
+  font-size: 16px;
   font-family: inherit;
   transition: all 0.2s ease;
   background: white;
@@ -122,13 +116,12 @@ input:focus, textarea:focus {
   box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
 }
 
-input::placeholder,
-textarea::placeholder {
+input::placeholder, textarea::placeholder {
   color: #9ca3af;
 }
 
 textarea {
-  min-height: 100px;
+  min-height: 120px;
   resize: vertical;
   line-height: 1.6;
 }
@@ -140,7 +133,7 @@ button {
   color: white;
   border: none;
   border-radius: 10px;
-  font-size: clamp(15px, 3vw, 16px);
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -165,11 +158,11 @@ button:disabled {
 
 /* Mensajes */
 .message {
-  padding: 14px 18px;
+  padding: 16px 20px;
   border-radius: 10px;
   margin: 20px 0;
   font-weight: 500;
-  font-size: clamp(14px, 3vw, 15px);
+  font-size: 15px;
   animation: slideIn 0.3s ease;
   background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
   color: #1e40af;
@@ -193,31 +186,27 @@ button:disabled {
   background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
   border: 2px solid #e5e7eb;
   border-radius: 12px;
-  padding: 24px;
+  padding: 28px;
   margin: 24px 0;
   text-align: center;
+  width: 100%;
 }
 
 .sync-section p {
   margin-bottom: 16px;
-  font-size: clamp(16px, 3.5vw, 18px);
+  font-size: 18px;
   color: #374151;
 }
 
 .sync-section strong {
   color: #667eea;
-  font-size: clamp(24px, 5vw, 32px);
+  font-size: 36px;
   font-weight: 700;
-}
-
-.sync-section button {
-  max-width: 400px;
-  margin: 0 auto;
 }
 
 .sync-info {
   margin-top: 12px;
-  font-size: clamp(13px, 2.8vw, 14px);
+  font-size: 14px;
   color: #6b7280;
   font-style: italic;
 }
@@ -228,29 +217,12 @@ button:disabled {
   gap: 8px;
   margin: 32px 0 24px 0;
   border-bottom: 2px solid #e5e7eb;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
-}
-
-.tabs::-webkit-scrollbar {
-  height: 4px;
-}
-
-.tabs::-webkit-scrollbar-track {
-  background: #f3f4f6;
-  border-radius: 4px;
-}
-
-.tabs::-webkit-scrollbar-thumb {
-  background: #667eea;
-  border-radius: 4px;
+  width: 100%;
 }
 
 .tab {
   flex: 1;
-  min-width: max-content;
-  padding: 14px 20px;
+  padding: 14px 24px;
   background: transparent;
   border: none;
   border-bottom: 3px solid transparent;
@@ -258,8 +230,7 @@ button:disabled {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
-  white-space: nowrap;
-  font-size: clamp(14px, 3vw, 15px);
+  font-size: 15px;
 }
 
 .tab:hover:not(:disabled) {
@@ -281,12 +252,13 @@ button:disabled {
 /* Lista de datos */
 .data-list {
   margin-top: 24px;
+  width: 100%;
 }
 
 .data-list h2 {
   margin-bottom: 20px;
   color: #1f2937;
-  font-size: clamp(18px, 4vw, 22px);
+  font-size: 22px;
   font-weight: 700;
 }
 
@@ -297,16 +269,15 @@ button:disabled {
   align-items: center;
   margin-bottom: 20px;
   gap: 16px;
-  flex-wrap: wrap;
 }
 
 .refresh-btn {
-  width: auto;
-  min-width: 140px;
   padding: 10px 20px;
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  font-size: clamp(13px, 2.8vw, 14px);
+  font-size: 14px;
   box-shadow: 0 2px 10px rgba(16, 185, 129, 0.3);
+  width: auto;
+  min-width: 150px;
 }
 
 .refresh-btn:hover:not(:disabled) {
@@ -316,12 +287,13 @@ button:disabled {
 /* Items de datos */
 .data-item {
   background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
-  padding: 18px 20px;
+  padding: 20px;
   border-radius: 12px;
   margin-bottom: 12px;
   border-left: 4px solid #e5e7eb;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: 100%;
 }
 
 .data-item:hover {
@@ -345,7 +317,7 @@ button:disabled {
 .data-item h3 {
   margin-bottom: 8px;
   color: #1f2937;
-  font-size: clamp(16px, 3.5vw, 18px);
+  font-size: 18px;
   font-weight: 600;
   word-wrap: break-word;
 }
@@ -354,12 +326,12 @@ button:disabled {
   color: #6b7280;
   margin-bottom: 12px;
   line-height: 1.6;
-  font-size: clamp(14px, 3vw, 15px);
+  font-size: 15px;
   word-wrap: break-word;
 }
 
 .data-item .meta {
-  font-size: clamp(12px, 2.5vw, 13px);
+  font-size: 13px;
   color: #9ca3af;
   display: flex;
   justify-content: space-between;
@@ -371,9 +343,9 @@ button:disabled {
 /* Badges */
 .badge {
   display: inline-block;
-  padding: 4px 10px;
+  padding: 5px 12px;
   border-radius: 6px;
-  font-size: clamp(11px, 2.3vw, 12px);
+  font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -395,13 +367,12 @@ button:disabled {
 }
 
 /* Estados */
-.empty-state,
-.loading-state {
+.empty-state, .loading-state {
   text-align: center;
   padding: 60px 20px;
   color: #6b7280;
   font-style: italic;
-  font-size: clamp(15px, 3.2vw, 16px);
+  font-size: 16px;
 }
 
 .loading-state {
@@ -409,27 +380,68 @@ button:disabled {
   font-weight: 500;
 }
 
-/* Responsive - Tablets (768px - 1024px) */
-@media (max-width: 1024px) and (min-width: 769px) {
+/* ==================== RESPONSIVE ==================== */
+
+/* Tablets grandes (768px - 1024px) */
+@media screen and (max-width: 1024px) {
   .App {
-    max-width: 700px;
+    max-width: 750px;
   }
 }
 
-/* Responsive - Tablets pequeñas (481px - 768px) */
-@media (max-width: 768px) {
-  #root {
-    padding: 16px;
-    align-items: flex-start;
-  }
-  
+/* Tablets (481px - 768px) */
+@media screen and (max-width: 768px) {
   .App {
-    gap: 16px;
+    padding: 16px;
   }
   
   header {
-    padding: 20px 24px;
+    padding: 24px;
+  }
+  
+  header h1 {
+    font-size: 26px;
+  }
+  
+  main {
+    padding: 28px 24px;
+  }
+  
+  .sync-section {
+    padding: 24px 20px;
+  }
+  
+  .sync-section strong {
+    font-size: 32px;
+  }
+  
+  .tabs {
+    gap: 4px;
+  }
+  
+  .tab {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Móviles (hasta 480px) */
+@media screen and (max-width: 480px) {
+  .App {
+    padding: 12px;
+  }
+  
+  header {
+    padding: 20px;
     border-radius: 12px;
+  }
+  
+  header h1 {
+    font-size: 22px;
+  }
+  
+  .status {
+    font-size: 14px;
   }
   
   main {
@@ -443,20 +455,55 @@ button:disabled {
     padding-bottom: 28px;
   }
   
+  input, textarea {
+    padding: 12px 16px;
+    font-size: 16px; /* No cambiar - previene zoom en iOS */
+  }
+  
   textarea {
     min-height: 100px;
   }
   
+  button {
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+  
+  .message {
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+  
   .sync-section {
-    padding: 20px;
+    padding: 20px 16px;
+  }
+  
+  .sync-section p {
+    font-size: 16px;
+  }
+  
+  .sync-section strong {
+    font-size: 28px;
+  }
+  
+  .sync-info {
+    font-size: 13px;
   }
   
   .tabs {
-    margin: 28px 0 20px 0;
+    margin: 24px 0 20px 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
   
   .tab {
     padding: 12px 16px;
+    font-size: 14px;
+    min-width: fit-content;
+  }
+  
+  .data-list h2 {
+    font-size: 20px;
   }
   
   .server-header {
@@ -466,146 +513,99 @@ button:disabled {
   
   .refresh-btn {
     width: 100%;
+    min-width: auto;
   }
   
   .data-item {
-    padding: 16px 18px;
+    padding: 16px;
+  }
+  
+  .data-item h3 {
+    font-size: 16px;
+  }
+  
+  .data-item p {
+    font-size: 14px;
   }
   
   .data-item .meta {
+    font-size: 12px;
     flex-direction: column;
     align-items: flex-start;
   }
-}
-
-/* Responsive - Móviles (hasta 480px) */
-@media (max-width: 480px) {
-  #root {
-    padding: 12px;
+  
+  .badge {
+    font-size: 11px;
+    padding: 4px 10px;
   }
   
+  .empty-state, .loading-state {
+    padding: 40px 16px;
+    font-size: 15px;
+  }
+}
+
+/* Móviles pequeños (hasta 360px) */
+@media screen and (max-width: 360px) {
   .App {
-    gap: 12px;
+    padding: 10px;
   }
   
   header {
-    padding: 18px 20px;
-    border-radius: 10px;
+    padding: 18px;
+  }
+  
+  header h1 {
+    font-size: 20px;
   }
   
   main {
     padding: 20px 16px;
-    border-radius: 10px;
-  }
-  
-  form {
-    gap: 12px;
-    margin-bottom: 24px;
-    padding-bottom: 24px;
-  }
-  
-  input, textarea {
-    padding: 12px 14px;
-    border-radius: 8px;
-  }
-  
-  textarea {
-    min-height: 90px;
-  }
-  
-  button {
-    padding: 12px 20px;
-    border-radius: 8px;
-  }
-  
-  .message {
-    padding: 12px 16px;
-    border-radius: 8px;
   }
   
   .sync-section {
-    padding: 18px 16px;
-    border-radius: 10px;
-  }
-  
-  .tabs {
-    gap: 4px;
-    margin: 24px 0 16px 0;
-  }
-  
-  .tab {
-    padding: 12px 14px;
-  }
-  
-  .data-item {
-    padding: 14px 16px;
-    border-radius: 10px;
-  }
-  
-  .empty-state,
-  .loading-state {
-    padding: 40px 16px;
-  }
-}
-
-/* Responsive - Móviles muy pequeños (hasta 360px) */
-@media (max-width: 360px) {
-  #root {
-    padding: 8px;
-  }
-  
-  header {
-    padding: 16px;
-  }
-  
-  main {
     padding: 18px 14px;
   }
   
-  .sync-section {
-    padding: 16px 14px;
-  }
-  
-  .tab {
-    padding: 10px 12px;
-  }
-  
   .data-item {
-    padding: 12px 14px;
+    padding: 14px;
   }
 }
 
 /* Landscape en móviles */
-@media (max-height: 500px) and (orientation: landscape) {
-  #root {
-    align-items: flex-start;
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .App {
     padding: 12px;
   }
   
   header {
-    padding: 16px 20px;
+    padding: 16px 24px;
+  }
+  
+  header h1 {
+    font-size: 20px;
   }
   
   main {
-    padding: 20px;
+    padding: 20px 24px;
   }
   
   textarea {
     min-height: 80px;
   }
-}
-
-/* Dark mode support (opcional para el futuro) */
-@media (prefers-color-scheme: dark) {
-  /* Puedes descomentar esto si quieres soporte dark mode */
-  /*
-  body {
-    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  
+  .sync-section {
+    padding: 20px;
   }
   
-  header, main {
-    background: #1f2937;
-    color: #f9fafb;
+  .empty-state, .loading-state {
+    padding: 30px 16px;
   }
-  */
+}
+
+/* Desktop grande (>1400px) */
+@media screen and (min-width: 1400px) {
+  .App {
+    max-width: 1000px;
+  }
 }
