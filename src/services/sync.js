@@ -1,6 +1,5 @@
 import { storage } from './storage';
 
-// Detectar automáticamente la URL del API
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
 
 console.log('API URL configurada:', API_URL);
@@ -9,6 +8,32 @@ export const syncService = {
   // Verificar si hay conexión
   isOnline() {
     return navigator.onLine;
+  },
+
+  // NUEVO: Obtener todos los datos del servidor
+  async fetchServerData() {
+    if (!this.isOnline()) {
+      throw new Error('No hay conexión a internet');
+    }
+
+    try {
+      const response = await fetch(`${API_URL}/datos`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`Error del servidor: ${response.status}`);
+      }
+
+      const result = await response.json();
+      return result.data || [];
+    } catch (error) {
+      console.error('Error obteniendo datos del servidor:', error);
+      throw error;
+    }
   },
 
   // Sincronizar datos pendientes
