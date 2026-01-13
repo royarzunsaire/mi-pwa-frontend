@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0" version="29.2.10">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.3.1">
   <diagram name="Página-1" id="1Sepbt9GLNwDnR7enlTx">
-    <mxGraphModel dx="1034" dy="570" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1042" dy="542" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -8,13 +8,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="azQG5umwpUyBKQLyNdQ6-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Solicitud de Terreno" vertex="1">
-          <mxGeometry height="60" width="120" x="50" y="140" as="geometry" />
+          <mxGeometry height="60" width="120" x="120" y="390" as="geometry" />
         </mxCell>
         <mxCell id="azQG5umwpUyBKQLyNdQ6-5" edge="1" parent="1" source="azQG5umwpUyBKQLyNdQ6-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="azQG5umwpUyBKQLyNdQ6-4" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="azQG5umwpUyBKQLyNdQ6-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Antecedentes administrativos" vertex="1">
-          <mxGeometry height="60" width="110" x="220" y="140" as="geometry" />
+          <mxGeometry height="60" width="110" x="290" y="390" as="geometry" />
         </mxCell>
         <mxCell id="azQG5umwpUyBKQLyNdQ6-7" edge="1" parent="1" source="azQG5umwpUyBKQLyNdQ6-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="azQG5umwpUyBKQLyNdQ6-6" value="">
           <mxGeometry relative="1" as="geometry" />
@@ -25,30 +25,43 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="azQG5umwpUyBKQLyNdQ6-4" parent="1" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" value="Cumple?" vertex="1">
-          <mxGeometry height="80" width="80" x="380" y="130" as="geometry" />
+          <mxGeometry height="80" width="80" x="450" y="380" as="geometry" />
         </mxCell>
-        <mxCell id="azQG5umwpUyBKQLyNdQ6-10" edge="1" parent="1" source="azQG5umwpUyBKQLyNdQ6-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="azQG5umwpUyBKQLyNdQ6-9" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-10" edge="1" parent="1" source="azQG5umwpUyBKQLyNdQ6-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="760" y="420" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="azQG5umwpUyBKQLyNdQ6-6" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="Se Entrega el terreno" vertex="1">
-          <mxGeometry height="60" width="100" x="520" y="140" as="geometry" />
+          <mxGeometry height="60" width="100" x="590" y="390" as="geometry" />
         </mxCell>
-        <mxCell id="azQG5umwpUyBKQLyNdQ6-12" edge="1" parent="1" source="azQG5umwpUyBKQLyNdQ6-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="azQG5umwpUyBKQLyNdQ6-11" value="">
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-11" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="Recepcion Final de la Obra" vertex="1">
+          <mxGeometry height="60" width="150" x="1600" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="GF1GEGUNH87mMW0UqebG-6" edge="1" parent="1" source="GF1GEGUNH87mMW0UqebG-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="azQG5umwpUyBKQLyNdQ6-11">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="azQG5umwpUyBKQLyNdQ6-9" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="Supervisión de los avances conforme a lo estipulado en el proyecto aprobado." vertex="1">
-          <mxGeometry height="60" width="120" x="690" y="140" as="geometry" />
+        <mxCell id="GF1GEGUNH87mMW0UqebG-2" parent="1" style="swimlane;startSize=0;" value="" vertex="1">
+          <mxGeometry height="300" width="670" x="760" y="260" as="geometry" />
         </mxCell>
-        <mxCell id="azQG5umwpUyBKQLyNdQ6-11" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="Información se respalda a traves de correos hasta la recepcion final de la obra" vertex="1">
-          <mxGeometry height="60" width="150" x="890" y="140" as="geometry" />
+        <mxCell id="GF1GEGUNH87mMW0UqebG-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;autosize=1;resizable=0;" value="App Movil - Inspeccion en terreno" vertex="1">
+          <mxGeometry height="30" width="200" x="1010" y="260" as="geometry" />
         </mxCell>
-        <mxCell id="azQG5umwpUyBKQLyNdQ6-17" edge="1" parent="1" source="azQG5umwpUyBKQLyNdQ6-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="azQG5umwpUyBKQLyNdQ6-16" value="">
+        <mxCell id="GF1GEGUNH87mMW0UqebG-9" edge="1" parent="1" source="GF1GEGUNH87mMW0UqebG-3" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryPerimeter=0;" target="GF1GEGUNH87mMW0UqebG-19" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1100" y="260" as="sourcePoint" />
+            <mxPoint x="1110" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GF1GEGUNH87mMW0UqebG-10" parent="1" style="swimlane;startSize=0;" value="" vertex="1">
+          <mxGeometry height="200" width="730" x="20" y="10" as="geometry">
+            <mxRectangle height="80" width="50" x="20" y="10" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-17" edge="1" parent="GF1GEGUNH87mMW0UqebG-10" source="azQG5umwpUyBKQLyNdQ6-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="azQG5umwpUyBKQLyNdQ6-16" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="azQG5umwpUyBKQLyNdQ6-13" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="Primera Fase:&lt;br&gt;Confeccion del contrato" vertex="1">
-          <mxGeometry height="110" width="110" x="50" y="270" as="geometry" />
-        </mxCell>
-        <mxCell id="azQG5umwpUyBKQLyNdQ6-22" edge="1" parent="1" source="azQG5umwpUyBKQLyNdQ6-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="azQG5umwpUyBKQLyNdQ6-21" value="">
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-22" edge="1" parent="GF1GEGUNH87mMW0UqebG-10" source="azQG5umwpUyBKQLyNdQ6-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="azQG5umwpUyBKQLyNdQ6-21" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="azQG5umwpUyBKQLyNdQ6-25" connectable="0" parent="azQG5umwpUyBKQLyNdQ6-22" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="SI" vertex="1">
@@ -56,17 +69,41 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="azQG5umwpUyBKQLyNdQ6-16" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="Contrato Firmado?" vertex="1">
-          <mxGeometry height="80" width="80" x="220" y="285" as="geometry" />
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-16" parent="GF1GEGUNH87mMW0UqebG-10" style="rhombus;whiteSpace=wrap;html=1;" value="Contrato Firmado?" vertex="1">
+          <mxGeometry height="80" width="80" x="225" y="65" as="geometry" />
         </mxCell>
-        <mxCell id="azQG5umwpUyBKQLyNdQ6-27" edge="1" parent="1" source="azQG5umwpUyBKQLyNdQ6-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="azQG5umwpUyBKQLyNdQ6-26" value="">
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-27" edge="1" parent="GF1GEGUNH87mMW0UqebG-10" source="azQG5umwpUyBKQLyNdQ6-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="azQG5umwpUyBKQLyNdQ6-26" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="azQG5umwpUyBKQLyNdQ6-21" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Inicio Fase 2" vertex="1">
-          <mxGeometry height="80" width="80" x="380" y="285" as="geometry" />
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-21" parent="GF1GEGUNH87mMW0UqebG-10" style="ellipse;whiteSpace=wrap;html=1;" value="Inicio Fase 2" vertex="1">
+          <mxGeometry height="80" width="80" x="385" y="65" as="geometry" />
         </mxCell>
-        <mxCell id="azQG5umwpUyBKQLyNdQ6-26" parent="1" style="whiteSpace=wrap;html=1;" value="Integración con WF:&lt;br&gt;Visualización contrato firmado, n°solicitud primera fase y ID gestor de negocio 3.0" vertex="1">
-          <mxGeometry height="85" width="170" x="520" y="282.5" as="geometry" />
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-26" parent="GF1GEGUNH87mMW0UqebG-10" style="whiteSpace=wrap;html=1;" value="Integración con WF:&lt;br&gt;Visualización contrato firmado, n°solicitud primera fase y ID gestor de negocio 3.0" vertex="1">
+          <mxGeometry height="85" width="170" x="525" y="62.5" as="geometry" />
+        </mxCell>
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-13" parent="GF1GEGUNH87mMW0UqebG-10" style="whiteSpace=wrap;html=1;aspect=fixed;" value="Primera Fase:&lt;br&gt;Confeccion del contrato" vertex="1">
+          <mxGeometry height="110" width="110" x="55" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="GF1GEGUNH87mMW0UqebG-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;autosize=1;resizable=0;" value="Flujo de la App en Sharepoint - Workflow" vertex="1">
+          <mxGeometry height="30" width="240" x="240" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="GF1GEGUNH87mMW0UqebG-18" edge="1" parent="1" source="azQG5umwpUyBKQLyNdQ6-2" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="GF1GEGUNH87mMW0UqebG-10" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="420" y="330" as="sourcePoint" />
+            <mxPoint x="470" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GF1GEGUNH87mMW0UqebG-19" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" value="Supervisión de los avances conforme a lo estipulado en el proyecto aprobado." vertex="1">
+          <mxGeometry height="100" width="80" x="1070" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="GF1GEGUNH87mMW0UqebG-20" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" value="&#xa;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;Información se respalda a traves de correos hasta la recepcion final de la obra&lt;/span&gt;&#xa;&#xa;" vertex="1">
+          <mxGeometry height="110" width="90" x="1630" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="GF1GEGUNH87mMW0UqebG-21" edge="1" parent="1" source="azQG5umwpUyBKQLyNdQ6-11" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="GF1GEGUNH87mMW0UqebG-20" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1480" y="330" as="sourcePoint" />
+            <mxPoint x="1530" y="280" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
