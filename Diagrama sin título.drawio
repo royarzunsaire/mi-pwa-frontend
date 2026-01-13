@@ -1,0 +1,74 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0" version="29.2.10">
+  <diagram name="Página-1" id="1Sepbt9GLNwDnR7enlTx">
+    <mxGraphModel dx="1034" dy="570" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-3" edge="1" parent="1" source="azQG5umwpUyBKQLyNdQ6-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="azQG5umwpUyBKQLyNdQ6-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Solicitud de Terreno" vertex="1">
+          <mxGeometry height="60" width="120" x="50" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-5" edge="1" parent="1" source="azQG5umwpUyBKQLyNdQ6-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="azQG5umwpUyBKQLyNdQ6-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Antecedentes administrativos" vertex="1">
+          <mxGeometry height="60" width="110" x="220" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-7" edge="1" parent="1" source="azQG5umwpUyBKQLyNdQ6-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="azQG5umwpUyBKQLyNdQ6-6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-8" connectable="0" parent="azQG5umwpUyBKQLyNdQ6-7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="SI" vertex="1">
+          <mxGeometry relative="1" x="-0.0667" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-4" parent="1" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" value="Cumple?" vertex="1">
+          <mxGeometry height="80" width="80" x="380" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-10" edge="1" parent="1" source="azQG5umwpUyBKQLyNdQ6-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="azQG5umwpUyBKQLyNdQ6-9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-6" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="Se Entrega el terreno" vertex="1">
+          <mxGeometry height="60" width="100" x="520" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-12" edge="1" parent="1" source="azQG5umwpUyBKQLyNdQ6-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="azQG5umwpUyBKQLyNdQ6-11" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-9" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="Supervisión de los avances conforme a lo estipulado en el proyecto aprobado." vertex="1">
+          <mxGeometry height="60" width="120" x="690" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-11" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="Información se respalda a traves de correos hasta la recepcion final de la obra" vertex="1">
+          <mxGeometry height="60" width="150" x="890" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-17" edge="1" parent="1" source="azQG5umwpUyBKQLyNdQ6-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="azQG5umwpUyBKQLyNdQ6-16" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-13" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="Primera Fase:&lt;br&gt;Confeccion del contrato" vertex="1">
+          <mxGeometry height="110" width="110" x="50" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-22" edge="1" parent="1" source="azQG5umwpUyBKQLyNdQ6-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="azQG5umwpUyBKQLyNdQ6-21" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-25" connectable="0" parent="azQG5umwpUyBKQLyNdQ6-22" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="SI" vertex="1">
+          <mxGeometry relative="1" x="0.075" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-16" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="Contrato Firmado?" vertex="1">
+          <mxGeometry height="80" width="80" x="220" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-27" edge="1" parent="1" source="azQG5umwpUyBKQLyNdQ6-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="azQG5umwpUyBKQLyNdQ6-26" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-21" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Inicio Fase 2" vertex="1">
+          <mxGeometry height="80" width="80" x="380" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="azQG5umwpUyBKQLyNdQ6-26" parent="1" style="whiteSpace=wrap;html=1;" value="Integración con WF:&lt;br&gt;Visualización contrato firmado, n°solicitud primera fase y ID gestor de negocio 3.0" vertex="1">
+          <mxGeometry height="85" width="170" x="520" y="282.5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
