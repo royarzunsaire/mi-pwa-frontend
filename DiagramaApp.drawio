@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.3.1">
   <diagram name="Página-1" id="1Sepbt9GLNwDnR7enlTx">
-    <mxGraphModel dx="1281" dy="1832" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1079" dy="1672" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -50,7 +50,7 @@
         </mxCell>
         <mxCell id="GF1GEGUNH87mMW0UqebG-2" parent="1" style="swimlane;startSize=0;" value="" vertex="1">
           <mxGeometry height="300" width="670" x="1330" y="-340" as="geometry">
-            <mxRectangle height="40" width="50" x="760" y="270" as="alternateBounds" />
+            <mxRectangle height="40" width="50" x="1330" y="-340" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="GF1GEGUNH87mMW0UqebG-22" parent="GF1GEGUNH87mMW0UqebG-2" style="whiteSpace=wrap;html=1;aspect=fixed;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Fase de entrada:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Estado de Entrada&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
@@ -133,7 +133,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="GF1GEGUNH87mMW0UqebG-19" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" value="Supervisión de los avances conforme a lo estipulado en el proyecto aprobado." vertex="1">
-          <mxGeometry height="100" width="80" x="1220" y="-530" as="geometry" />
+          <mxGeometry height="100" width="80" x="1640" y="-550" as="geometry" />
         </mxCell>
         <mxCell id="GF1GEGUNH87mMW0UqebG-20" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" value="&#xa;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;Información se respalda a traves de correos hasta la recepcion final de la obra&lt;/span&gt;&#xa;&#xa;" vertex="1">
           <mxGeometry height="110" width="90" x="1780" y="-380" as="geometry" />
